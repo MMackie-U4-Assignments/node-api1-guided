@@ -25,7 +25,7 @@ server.get('/api/dogs', (req, res) => {
 })
 
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
-server.get('/api/dogs/:id', (req, res) => {
+server.get('/api/dogs/:qwerty', (req, res) => {
     res.json(req.params);
 });
 
