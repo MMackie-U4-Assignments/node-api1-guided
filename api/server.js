@@ -39,8 +39,9 @@ server.get('/api/dogs/:id', (req, res) => {
 
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
 server.post('/api/dogs', (req, res) => {
-    console.log(req.body);
-    res.end();
+    Dog.create(req.body).then(result => {
+        res.status(201).json(result);
+    })
 });
 
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
