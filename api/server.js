@@ -1,3 +1,7 @@
+const express = require('express');
+
+const server = express();
+
 // IMPORTS AT THE TOP
 
 // INSTANCE OF EXPRESS APP
@@ -14,3 +18,5 @@
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 
 // EXPOSING THE SERVER TO OTHER MODULES
+
+module.exports = server;
