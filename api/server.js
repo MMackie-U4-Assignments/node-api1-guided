@@ -27,6 +27,7 @@ server.get('/api/dogs', (req, res) => {
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
 server.get('/api/dogs/:id', (req, res) => {
     Dog.findById(req.params.id).then(result => {
+        console.log(result);
         res.json(result);
     });
 });
