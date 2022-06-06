@@ -13,8 +13,7 @@ const server = express();
 // [GET]    /             (Hello World endpoint)
 server.get('/', (req, res) => {
     console.log('received a request!');
-    // res.json({ message: 'received a request!' });
-    // res.end()
+    res.json({ message: 'received a request!' });
 });
 
 // [GET]    /api/dogs     (R of CRUD, fetch all dogs)
