@@ -15,7 +15,7 @@ server.use(express.json());
 // [GET]    /             (Hello World endpoint)
 server.get('/', (req, res) => {
     console.log('received a request!');
-    res.json({ message: 'received a request!' });
+    res.status(200).json({ message: 'received a request!' });
 });
 
 // [GET]    /api/dogs     (R of CRUD, fetch all dogs)
