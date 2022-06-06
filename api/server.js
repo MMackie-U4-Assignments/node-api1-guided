@@ -25,8 +25,10 @@ server.get('/api/dogs', (req, res) => {
 })
 
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
-server.get('/api/dogs/:qwerty', (req, res) => {
-    res.json(req.params);
+server.get('/api/dogs/:id', (req, res) => {
+    Dog.findById(req.params.id).then(result => {
+        res.json(result);
+    });
 });
 
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
