@@ -32,7 +32,7 @@ server.get('/api/dogs/:id', (req, res) => {
         }
 
 
-        res.json(result);
+        res.json('result');
     });
 });
 
