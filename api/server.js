@@ -29,10 +29,10 @@ server.get('/api/dogs/:id', (req, res) => {
     Dog.findById(req.params.id).then(result => {
         if(result == null) {
             res.status(404).json({ message: 'dog not found!' });
+            return;
         }
-
-
-        res.json('result');
+        
+        res.json(result);
     });
 });
 
