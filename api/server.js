@@ -2,15 +2,20 @@
 
 const express = require('express');
 
-const server = express();
-
 // INSTANCE OF EXPRESS APP
+
+const server = express();
 
 // GLOBAL MIDDLEWARE
 
 // ENDPOINTS
 
 // [GET]    /             (Hello World endpoint)
+server.get('/', (req, res) => {
+    console.log('received a request!')
+    res.end();
+});
+
 // [GET]    /api/dogs     (R of CRUD, fetch all dogs)
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
