@@ -38,7 +38,18 @@ server.get('/api/dogs/:id', (req, res) => {
 
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
+
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
+server.get('/api/dogs/:id', (req, res) => {
+    Dog.delete(req.params.id).then(result => {
+        if(result == null) {
+            res.status(404).json({ message: 'dog not found!' });
+            return;
+        }
+        
+        res.json(result);
+    });
+});
 
 // EXPOSING THE SERVER TO OTHER MODULES
 
