@@ -1,8 +1,8 @@
+// IMPORTS AT THE TOP
+
 const express = require('express');
 
 const server = express();
-
-// IMPORTS AT THE TOP
 
 // INSTANCE OF EXPRESS APP
 
